@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+<h1>✏️ Edit Entry</h1>
+
+<input type="text" id="customerName">
+<input type="text" id="accountNo">
+<input type="text" id="accountType">
+<input type="text" id="mobileNo">
+<input type="number" id="noOfPassbooks">
+<input type="text" id="remarks">
+
+<button onclick="updateEntry()">
+Save Changes
+</button>
+
+<button onclick="window.location.href='search.html'">
+Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+document.getElementById("customerName").value =
+localStorage.getItem("editCustomerName");
+
+document.getElementById("accountNo").value =
+localStorage.getItem("editAccountNo");
+
+document.getElementById("accountType").value =
+localStorage.getItem("editAccountType");
+
+document.getElementById("mobileNo").value =
+localStorage.getItem("editMobileNo");
+
+document.getElementById("noOfPassbooks").value =
+localStorage.getItem("editNoOfPassbooks");
+
+document.getElementById("remarks").value =
+localStorage.getItem("editRemarks");
+
+</script>
+
+</body>
+</html>

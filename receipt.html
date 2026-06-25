@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passbook Receipt</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            width: 250px;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        hr{
+            border: 1px dashed black;
+        }
+
+        .receipt{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            margin-top:15px;
+            font-size:16px;
+        }
+
+        @media print {
+
+            button{
+                display:none;
+            }
+
+            body{
+                width:100%;
+            }
+
+            .receipt{
+                border:none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="receipt">
+
+    <h2>BOGADI BO</h2>
+
+    <h3>PASSBOOK COLLECTION RECEIPT</h3>
+
+    <hr>
+
+    <p><b>Token No :</b> <span id="rToken"></span></p>
+
+    <p><b>Name :</b> <span id="rName"></span></p>
+
+    <p><b>A/C No :</b> <span id="rAccount"></span></p>
+
+    <p><b>Date :</b> <span id="rDate"></span></p>
+
+    <hr>
+
+    <p>Please keep this receipt safely.</p>
+
+    <p>Thank You</p>
+
+</div>
+
+<button onclick="window.print()">
+🖨️ Print Receipt
+</button>
+
+<script>
+
+document.getElementById("rToken").innerText =
+localStorage.getItem("tokenNo");
+
+document.getElementById("rName").innerText =
+localStorage.getItem("customerName");
+
+document.getElementById("rAccount").innerText =
+localStorage.getItem("accountNo");
+
+document.getElementById("rDate").innerText =
+new Date().toLocaleDateString();
+
+</script>
+
+</body>
+</html>

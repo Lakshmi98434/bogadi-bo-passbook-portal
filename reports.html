@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+    <h1>📊 Reports</h1>
+    <h2>Bogadi BO</h2>
+
+    <div id="reportData">
+        Loading...
+    </div>
+    <hr>
+
+<h3>📅 Date-wise Report</h3>
+
+<input type="date" id="reportDate">
+
+<button onclick="getDateReport()">
+    Get Report
+</button>
+
+<div id="dateReportResult"></div>
+<br>
+
+<button onclick="printDateReport()">
+🖨️ Print Report
+</button>
+
+    <button onclick="window.location.href='dashboard.html'">
+        ⬅ Back to Dashboard
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+loadReports();
+</script>
+
+</body>
+</html>

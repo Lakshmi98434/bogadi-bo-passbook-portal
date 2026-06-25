@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Passbook Collection Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+ <h1>📚 Passbook Collection Portal</h1>
+<h2>Bogadi BO</h2>
+
+<p><b>Total Passbooks:</b> <span id="total">0</span></p>
+<p><b>Pending:</b> <span id="pending">0</span></p>
+<p><b>Ready for Delivery:</b> <span id="ready">0</span></p>
+<p><b>Delivered:</b> <span id="delivered">0</span></p>
+
+<button onclick="window.location.href='new-entry.html'">
+    ➕ New Entry
+</button>
+<button onclick="window.location.href='search.html'">
+    🔍 Search Passbook
+</button>
+<button onclick="window.location.href='pending.html'">
+    📦 Pending Passbooks
+</button>
+<button onclick="window.location.href='ready.html'">
+    ✅ Ready for Delivery
+</button>
+<button onclick="window.location.href='reports.html'">
+    📊 Reports
+</button>
+<button onclick="logout()">🚪 Logout</button>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+loadDashboardStats();
+</script>
+
+</body>
+</html>

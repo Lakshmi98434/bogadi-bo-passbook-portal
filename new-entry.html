@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Entry - Passbook Collection Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+    <h1>➕ New Passbook Entry</h1>
+    <h2>Bogadi BO</h2>
+
+    <input type="text" id="customerName"
+           placeholder="Customer Name">
+
+    <input type="text" id="accountNo"
+           placeholder="Account Number">
+
+    <select id="accountType">
+        <option value="">Select Account Type</option>
+        <option>SB</option>
+        <option>RD</option>
+        <option>TD</option>
+        <option>MIS</option>
+        <option>SCSS</option>
+        <option>PPF</option>
+        <option>SSA</option>
+    </select>
+
+    <input type="text" id="mobileNo"
+           placeholder="Mobile Number (Optional)">
+
+    <input type="number" id="noOfPassbooks"
+           placeholder="Number of Passbooks">
+
+    <input type="text" id="remarks"
+           placeholder="Remarks">
+
+    <button onclick="saveEntry()">
+    💾 Save Entry
+</button>
+
+    <button onclick="window.location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
